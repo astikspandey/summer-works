@@ -1,2 +1,2 @@
 # summer-works
-my summer works
+These are my projects from 14th April to July 4th or more...
