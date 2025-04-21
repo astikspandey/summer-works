@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trackify - Pastel Pet Tracker</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <link rel="stylesheet" href="grand-october-four.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="bg-flower-svg bg-flower-svg-1">
+    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="22" fill="#fffbe6"/>
+      <ellipse cx="60" cy="30" rx="22" ry="30" fill="#ffd6e0"/>
+      <ellipse cx="90" cy="60" rx="30" ry="22" fill="#ffe5ec"/>
+      <ellipse cx="60" cy="90" rx="22" ry="30" fill="#ffd6e0"/>
+      <ellipse cx="30" cy="60" rx="30" ry="22" fill="#ffe5ec"/>
+      <circle cx="60" cy="60" r="16" fill="#ffe066"/>
+    </svg>
+  </div>
+  <div class="bg-flower-svg bg-flower-svg-2">
+    <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="45" cy="45" r="16" fill="#f3ffe3"/>
+      <ellipse cx="45" cy="18" rx="16" ry="22" fill="#c7d2fe"/>
+      <ellipse cx="72" cy="45" rx="22" ry="16" fill="#bae6fd"/>
+      <ellipse cx="45" cy="72" rx="16" ry="22" fill="#c7d2fe"/>
+      <ellipse cx="18" cy="45" rx="22" ry="16" fill="#bae6fd"/>
+      <circle cx="45" cy="45" r="10" fill="#ffe066"/>
+    </svg>
+  </div>
+  <div class="bg-flower-svg bg-flower-svg-3">
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="40" cy="40" r="13" fill="#e0e7ff"/>
+      <ellipse cx="40" cy="14" rx="13" ry="18" fill="#ffd3b6"/>
+      <ellipse cx="66" cy="40" rx="18" ry="13" fill="#fbcfe8"/>
+      <ellipse cx="40" cy="66" rx="13" ry="18" fill="#ffd3b6"/>
+      <ellipse cx="14" cy="40" rx="18" ry="13" fill="#fbcfe8"/>
+      <circle cx="40" cy="40" r="8" fill="#ffe066"/>
+    </svg>
+  </div>
+  <div class="bg-mountains">
+    <svg width="100vw" height="540" viewBox="0 0 1920 540" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100vw; height:540px; display:block;">
+      <defs>
+        <linearGradient id="wave" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#e0e7ff"/>
+          <stop offset="100%" stop-color="#bae6fd"/>
+        </linearGradient>
+        <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#fffbe6"/>
+          <stop offset="100%" stop-color="#ffe5b4"/>
+        </linearGradient>
+      </defs>
+      <!-- Waves (much bigger, fill more vertical space) -->
+      <path d="M0 440 Q 320 280 640 420 T 1280 400 T 1920 440 V 540 H 0 Z" fill="url(#wave)"/>
+      <!-- Beach sand (above waves, much taller) -->
+      <path d="M0 320 Q 320 300 640 340 T 1280 330 T 1920 320 V 440 Q 1600 410 1280 430 T 640 420 Q 320 410 0 440 Z" fill="url(#sand)"/>
+      <!-- Seashells -->
+      <ellipse cx="180" cy="410" rx="16" ry="10" fill="#ffe4e1" stroke="#eabfb9" stroke-width="2"/>
+      <ellipse cx="410" cy="390" rx="12" ry="8" fill="#fff8dc" stroke="#e6cfa7" stroke-width="1.5"/>
+      <!-- Umbrellas -->
+      <g transform="translate(300,370)">
+        <ellipse cx="0" cy="0" rx="22" ry="10" fill="#fcd34d"/>
+        <rect x="-2.5" y="0" width="5" height="32" rx="2" fill="#b45309"/>
+        <path d="M-22,0 Q0,-28 22,0 Q0,-12 -22,0" fill="#fca5a5"/>
+      </g>
+      <g transform="translate(700,410)">
+        <ellipse cx="0" cy="0" rx="18" ry="8" fill="#a5b4fc"/>
+        <rect x="-2" y="0" width="4" height="23" rx="1.5" fill="#6366f1"/>
+        <path d="M-18,0 Q0,-18 18,0 Q0,-8 -18,0" fill="#fef9c3"/>
+      </g>
+    </svg>
+  </div>
+  <!-- Boats (moving in CSS) -->
+  <div class="bg-boat boat1">
+    <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="30" cy="34" rx="22" ry="6" fill="#60a5fa"/>
+      <rect x="20" y="18" width="20" height="10" rx="3" fill="#fbbf24"/>
+      <polygon points="30,8 38,18 22,18" fill="#fef9c3"/>
+      <rect x="28" y="10" width="4" height="8" fill="#f59e42"/>
+    </svg>
+  </div>
+  <div class="bg-boat boat2">
+    <svg width="44" height="28" viewBox="0 0 44 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="22" cy="24" rx="15" ry="4" fill="#38bdf8"/>
+      <rect x="12" y="12" width="20" height="7" rx="2" fill="#f87171"/>
+      <polygon points="22,3 29,12 15,12" fill="#fef08a"/>
+      <rect x="20" y="7" width="4" height="5" fill="#fbbf24"/>
+    </svg>
+  </div>
+
+
+  <div class="bg-bird bird1">
+    <svg width="48" height="28" viewBox="0 0 48 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- body -->
+      <ellipse cx="24" cy="18" rx="8" ry="5" fill="#64748b"/>
+      <!-- left wing -->
+      <path d="M24 18 Q 10 8 4 22" stroke="#64748b" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <!-- right wing -->
+      <path d="M24 18 Q 38 8 44 22" stroke="#64748b" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <!-- head -->
+      <ellipse cx="31" cy="16" rx="2.2" ry="1.7" fill="#64748b"/>
+    </svg>
+  </div>
+  <div class="bg-bird bird2">
+    <svg width="38" height="20" viewBox="0 0 38 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="18" cy="14" rx="6" ry="3.5" fill="#334155"/>
+      <path d="M18 14 Q 7 7 2 16" stroke="#334155" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M18 14 Q 29 7 36 16" stroke="#334155" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="23.5" cy="13" rx="1.7" ry="1.2" fill="#334155"/>
+    </svg>
+  </div>
+  <div class="bg-bird bird3">
+    <svg width="32" height="16" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="15" cy="10" rx="4.5" ry="2.5" fill="#4b5563"/>
+      <path d="M15 10 Q 7 4 2 12" stroke="#4b5563" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M15 10 Q 23 4 30 12" stroke="#4b5563" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="19" cy="9" rx="1.1" ry="0.8" fill="#4b5563"/>
+    </svg>
+  </div>
+  <!-- Cute floating decorations -->
+  <div class="floating cloud cloud1">☁️</div>
+  <div class="floating cloud cloud2">☁️</div>
+  <div class="floating heart heart1">💖</div>
+  <div class="floating heart heart2">💜</div>
+  <div class="floating star star1">⭐️</div>
+  <div class="floating star star2">💙</div> <!-- blue accent -->
+
+  <div class="welcome-flex-row">
+  <div class="screen" id="welcome-screen">
+    <!-- Welcome box content remains unchanged -->
+    <h1 class="cute-title">🐱 Welcome to Trackify!</h1>
+    <h2 class="cute-subtitle">Your dreamy pastel pet companion ✨</h2>
+    <p class="cute-prompt">Hi sweet friend! 🌸<br>What should we call you? <span class="emoji">(｡•ᴗ•｡)♡</span></p>
+    <form id="user-name-form">
+      <input type="text" id="user-name" placeholder="Type your magical name..." required />
+      <button type="submit">✨ Let's Begin! ✨</button>
+    </form>
+  </div>
+
+  <script>
+    // Hide welcome and pet name screens for returning users
+    document.addEventListener('DOMContentLoaded', function() {
+      const user = localStorage.getItem('trackifyUser');
+      if (user) {
+        document.getElementById('welcome-screen').style.display = 'none';
+        document.getElementById('pet-name-screen').style.display = 'none';
+        document.getElementById('main-app').style.display = 'block';
+      }
+    });
+  </script>
+
+  <div class="screen" id="pet-name-screen" style="display:none;">
+    <h2>Hello, <span id="display-user-name"></span>! 🥰</h2>
+    <p class="cute-prompt">What's your pet's name? <span class="emoji">🐾</span></p>
+    <form id="pet-info-form">
+      <input type="text" id="pet-name" placeholder="Your pet's dreamy name..." required />
+      <button type="submit">Meet my pet! 💕</button>
+    </form>
+  </div>
+
+  <div class="screen" id="main-app" style="display:none;">
+    <img src="https://media-hosting.imagekit.io/4b546dec52cb4cb3/dog2.jpg?Expires=1839679782&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yMUlmchczZtQvmj4Sxh95W31DNLmwKYXmji3oHOOeWAnNBzwyrIztVhn0DORGCEklbr4OdQqtRsQypfXFGT3a8BM5vmCkSSgiMepRkyiu4e6OmYI~Rjf8-0KhA2aQ3ZbfOXeDBoAdjXMZRLBNTqGc9Rt3EboIT5XWlNReoQD7ln5RmsVDI8rXy8ZbWrf~GUEUQGxa7yg~EaQWLTlV5VN~-IlH1XXqGlwn~65XMiCrns4yVzzOoYPYlOqpZSHveqUvqiaVrcE1MsaHkVMYQaHb1GeERI8XelkYoTn8ApoIcbBXlNbZAv8DcPKyF82gfIyY2OlvLNQ5K~yPeTzZm3IjA__" alt="Happy Dog" class="main-app-dog-img">
+    <h2>🐾 <span id="display-user-name-main"></span>, this is <span id="pet-display-name"></span> 💖</h2>
+    <form id="pet-form">
+      <div class="pet-form-row">
+        <label for="pet-type">Type</label>
+        <select id="pet-type" required>
+          <option value="dog">🐶 Dog</option>
+          <option value="cat">🐱 Cat</option>
+          <option value="rabbit">🐰 Rabbit</option>
+          <option value="bird">🐦 Bird</option>
+          <option value="other">✨ Other</option>
+        </select>
+      </div>
+      <div class="pet-form-row">
+        <label for="pet-breed">Breed</label>
+        <input type="text" id="pet-breed" placeholder="Breed (e.g. Persian, Golden...)" />
+      </div>
+      <div class="pet-form-row">
+        <label for="pet-age">Age</label>
+        <input type="number" id="pet-age" placeholder="Age (years)" min="0" max="50" />
+      </div>
+      <div class="pet-form-row">
+        <label>Gender</label>
+        <label class="gender-radio"><input type="radio" name="pet-gender" value="female" checked> <span class="gender-icon">♀️</span> Girl</label>
+        <label class="gender-radio"><input type="radio" name="pet-gender" value="male"> <span class="gender-icon">♂️</span> Boy</label>
+        <label class="gender-radio"><input type="radio" name="pet-gender" value="other"> <span class="gender-icon">✨</span> Other</label>
+      </div>
+      <div class="pet-form-row">
+        <label for="pet-color">Color/Markings</label>
+        <input type="text" id="pet-color" placeholder="White with brown spots..." />
+      </div>
+      <div class="pet-form-row">
+        <label for="pet-fav">Favorite Toy</label>
+        <input type="text" id="pet-fav" placeholder="Squeaky Mouse, Ball..." />
+      </div>
+      <div class="pet-form-row">
+        <label for="pet-photo">Photo URL</label>
+        <input type="text" id="pet-photo" placeholder="Photo URL (optional)" />
+      </div>
+      <div class="pet-form-row">
+        <label for="pet-notes">Notes</label>
+        <textarea id="pet-notes" placeholder="Loves belly rubs!" rows="2"></textarea>
+      </div>
+      <button type="submit">Add Pet Details 🐾</button>
+    </form>
+    <div id="pet-added-message" style="display:none; color:#388e3c; margin-bottom:1em; font-weight:600;"></div>
+    <div id="pet-list"></div> 
+    <button id="add-new-pet" class="add-pet-btn">+ Add New Pet</button>
+    <button id="view-all-pets" class="care-btn">My Pets</button>
+  </div>
+
+  <div class="music-toggle" id="music-toggle">🎵</div>
+  <div class="music-panel hidden" id="music-controls">
+    <select id="music-vibe">
+      <option value="lullaby">🧸 Lullaby</option>
+      <option value="piano">☁️ Dreamy Piano</option>
+      <option value="ambient">🌊 Calm Ambient</option>
+      <option value="lofi">🎧 Soft Lofi</option>
+    </select>
+    <div class="controls">
+      <button id="play-btn">▶️</button>
+      <button id="pause-btn">⏸️</button>
+      <button id="mute-btn">🔇</button>
+      <button id="stop-btn">❌</button>
+      <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" />
+    </div>
+    <audio id="bg-music" loop></audio>
+  </div>
+
+  <!-- Pet Profile Page -->
+  <div class="screen pet-profile hidden" id="pet-profile">
+    <button class="back-btn" id="back-to-main">← Back</button>
+    <div class="profile-decor profile-flex">
+      <div class="profile-photo" id="profile-photo"></div>
+      <div class="profile-info">
+        <h2 id="profile-name"></h2>
+        <div id="profile-type-gender"></div>
+        <div class="profile-details">
+          <p><strong>Breed:</strong> <span id="profile-breed"></span></p>
+          <p><strong>Age:</strong> <span id="profile-age"></span></p>
+          <p><strong>Color:</strong> <span id="profile-color"></span></p>
+          <p><strong>Favorite Toy:</strong> <span id="profile-fav"></span></p>
+          <p><strong>Notes:</strong> <span id="profile-notes"></span></p>
+        </div>
+        <button class="care-btn" id="to-care-page">Pet Care & Logs</button>
+        <button class="care-btn" id="to-my-pets">My Pets</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Pets Page -->
+  <div class="screen hidden" id="my-pets-page">
+    <button class="back-btn" id="back-to-main2">← Back</button>
+    <h2>🐾 My Pets</h2>
+    <div id="my-pets-list"></div>
+  </div>
+
+  <!-- Pet Care & Logs Page -->
+  <div class="screen pet-care hidden" id="pet-care">
+    <button class="back-btn" id="back-to-profile">← Back</button>
+    <h2>🐾 Pet Care & Logs</h2>
+    <section class="care-section">
+      <h3>🍽️ Feeding Log</h3>
+      <ul id="feeding-log">
+        <!-- Feeding entries go here -->
+      </ul>
+      <button id="add-feeding">Add Feeding Entry</button>
+    </section>
+
+    <!-- Feeding Log Modal -->
+    <div id="feeding-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" id="close-feeding-modal">&times;</span>
+        <h3>Add Feeding Entry</h3>
+        <form id="feeding-form">
+          <label>Date & Time</label>
+          <input type="datetime-local" id="feeding-date" required><br>
+          <label>What was fed?</label>
+          <input type="text" id="feeding-food" required><br>
+          <label>Quantity</label>
+          <input type="text" id="feeding-quantity" required><br>
+          <label>Notes</label>
+          <textarea id="feeding-notes"></textarea><br>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <section class="care-section">
+      <h3>🏥 Vet Visits</h3>
+      <ul id="vet-log">
+        <!-- Vet visit entries go here -->
+      </ul>
+      <button id="add-vet">Add Vet Visit</button>
+    </section>
+
+    <!-- Vet Visit Modal -->
+    <div id="vet-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" id="close-vet-modal">&times;</span>
+        <h3>Add Vet Visit</h3>
+        <form id="vet-form">
+          <label>Date</label>
+          <input type="date" id="vet-date" required><br>
+          <label>Reason</label>
+          <input type="text" id="vet-reason" required><br>
+          <label>Cost</label>
+          <input type="number" id="vet-cost" min="0" step="0.01"><br>
+          <label>Medicines</label>
+          <input type="text" id="vet-meds"><br>
+          <label>Notes</label>
+          <textarea id="vet-notes"></textarea><br>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+
+    <section class="care-section" id="daily-checklist-section">
+      <h3>🗒️ Daily Checklist</h3>
+      <form id="add-checklist-item-form" style="display:flex;gap:8px;margin-bottom:8px;">
+        <input type="text" id="checklist-item-input" placeholder="Add a daily task..." required style="flex:1;">
+        <button type="submit" class="care-btn" style="padding:0 1em;">Add</button>
+      </form>
+      <ul id="daily-checklist"></ul>
+    </section>
+
+    <section class="care-section">
+      <h3>⏰ Reminders</h3>
+      <ul id="reminders-list">
+        <!-- Reminders go here -->
+      </ul>
+      <button id="add-reminder">Add Reminder</button>
+    </section>
+
+    <!-- Reminder Modal -->
+    <div id="reminder-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close" id="close-reminder-modal">&times;</span>
+        <h3>Add Reminder</h3>
+        <form id="reminder-form">
+          <label>Reminder</label>
+          <input type="text" id="reminder-text" required><br>
+          <label>Date & Time</label>
+          <input type="datetime-local" id="reminder-date"><br>
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Logs Page -->
+  <div id="all-logs-page" class="hidden">
+    <button id="back-to-main-logs" class="care-btn">Back</button>
+    <h2 style="margin-top:1em">All Logs</h2>
+    <section>
+      <h3>Feeding Logs</h3>
+      <div id="all-feeding-logs"></div>
+    </section>
+    <section>
+      <h3>Vet Visit Logs</h3>
+      <div id="all-vet-logs"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
